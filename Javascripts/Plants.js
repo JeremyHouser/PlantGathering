@@ -6,10 +6,17 @@ $.getJSON("https://jeremyhouser.github.io/PlantGathering/JSON/plants.json", func
         var plantObject = new Object();
         plantObject.Name = field.Name;
         plantObject.Description = field.Description;
-        plantsArray.Add(plantObject);
+        plantsArray.push(plantObject);
     });
 });
 
 $('.plantsClickable').on( "click", function(event){
-       alert(plantsArray.find(plantOjbect.Name($(this).text())).Description);
+    for (var i = 0, len = plantsArray.length; i < len; i++) 
+    {
+        if (plantsArray[i].Name === $(this).text())
+        {
+            alert(plantsArray[i].Description); // Return as soon as the object is found
+        }
+    }
+}
 });
