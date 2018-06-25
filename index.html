@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="./css/basics.css">
+
+    </head>
+    <body>
+        <form class="container" style="border: 1px solid black; ">
+        <div class="CentertheChild">
+            <h3 style="margin-left: -2%;">Broderick's Compendium: Plants and Fungi Across the Realm</h3>
+            <div class="ScrollbarBox" style="float: right;"></div>
+            <div>
+                <label>Plant Search: </label>
+                <input type="text" id="plantSearchBox" class=""><br>
+                <Label>Filters:</Label><br>
+                <div id="divRarGrp">Rarities: <br>
+                    <input type="checkbox" id="cbVC" > Very Common<br>
+                    <input type="checkbox" id="cbC" > Common<br>
+                    <input type="checkbox" id="cbUC" > Uncommon<br>
+                    <input type="checkbox" id="cbR" > Rare<br>
+                    <input type="checkbox" id="cbVR" > Very Rare<br>
+                    <input type="checkbox" id="cbL" > Legendary
+                </div>
+                <div id="divLocGrp">Locations:<br>
+                    <div id="divLocGrp1">
+                        <input type="checkbox" id="cbArc" > Arctic<br>
+                        <input type="checkbox" id="cbCit" > Cities<br>
+                        <input type="checkbox" id="cbCoa" > Coastal<br>
+                        <input type="checkbox" id="cbDes" > Desert<br>
+                        <input type="checkbox" id="cbFor" > Forests<br>
+                        <input type="checkbox" id="cbJun" > Jungles<br>
+                    </div>
+                    <div id="divLocGrp2">
+                        <input type="checkbox" id="cbMou" > Mountains<br>
+                        <input type="checkbox" id="cbOce" > Oceans<br>
+                        <input type="checkbox" id="cbPla" > Plains<br>
+                        <input type="checkbox" id="cbRiv" > Rivers<br>
+                        <input type="checkbox" id="cbSwa" > Swamps<br>
+                        <input type="checkbox" id="cbUdC" > Underdark/Caves
+                    </div>
+                </div>
+                <div id="plantData">
+                        <h1 id="plantName"></h1>
+                        <span id="locRarSpan">
+                            <a id="plantLocation"></a><a id="plantRarity"></a>
+                        </span>
+                        <p id="plantInfo"></p>
+                    </div>
+            </div>
+            
+        </div>
+        </form>
+    </body>
+</html>
