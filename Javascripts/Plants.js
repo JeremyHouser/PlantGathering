@@ -12,7 +12,7 @@ $.getJSON("https://jeremyhouser.github.io/PlantGathering/JSON/plants.json", func
     });
 });
 
-$(".plantsClickable").on( "click", function(event)
+$(document).on('click', "a.plantsClickable", function(event)
 {
     var desc;
     for (var i = 0, len = plantsArray.length; i < len; i++) 
