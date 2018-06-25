@@ -1,5 +1,5 @@
 $.getJSON("https://jeremyhouser.github.io/PlantGathering/JSON/plants.json", function(data){
     $.each(data, function(i, field){
-        $('#ScrollbarBox').append("<li>" + field.Name + "</li>");
+        $('#ScrollbarBox').append("<a class='plantsClickable'>" + field.Name + "</a>");
     });
 });
