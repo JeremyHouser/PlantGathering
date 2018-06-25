@@ -1,0 +1,59 @@
+.ScrollbarBox
+{
+    height: 250px;
+    width: 25%;
+    border:1px solid #ccc;
+    font:16px/26px Georgia, Garamond, Serif;
+    overflow:auto;
+    margin-right: 35%;
+    z-index: 99;
+}
+
+#plantName
+{
+    border-bottom: 2px solid black;
+    width: 70%;
+}
+
+.CentertheChild
+{
+    margin-left: 20%;
+}
+
+a
+{
+    text-decoration: none !important;
+    color: black;
+}
+a:hover
+{
+    color: black;
+}
+
+#divRarGrp
+{
+    float: left;
+}
+
+#divLocGrp
+{
+    float: right;
+}
+
+#divLocGrp1
+{
+    margin-right: 4px;
+    float: left;
+}
+#divLocGrp2
+{
+    margin-right: 4px;
+    float: right;
+}
+
+#plantData
+{
+    clear: both;
+    margin-bottom: auto;
+    width: 50%;
+}
