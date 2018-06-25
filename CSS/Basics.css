@@ -20,16 +20,6 @@
     margin-left: 20%;
 }
 
-a
-{
-    text-decoration: none !important;
-    color: black;
-}
-a:hover
-{
-    color: black;
-}
-
 #divRarGrp
 {
     float: left;
@@ -56,4 +46,14 @@ a:hover
     clear: both;
     margin-bottom: auto;
     width: 50%;
+}
+
+.plantsClickable
+{
+    text-decoration: none !important;
+    color: black;
+}
+.plantsClickable:hover
+{
+    color: black;
 }
