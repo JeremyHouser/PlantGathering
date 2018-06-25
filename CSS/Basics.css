@@ -56,4 +56,5 @@
 .plantsClickable:hover
 {
     color: black;
+    cursor: pointer;
 }
