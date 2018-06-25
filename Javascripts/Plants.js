@@ -19,10 +19,9 @@ $(document).on('click', "a.plantsClickable", function(event)
     {
         if (plantsArray[i].Name === $(this).text())
         {
-            desc = plantsArray[i].Description;
+            $('#plantName').Text(plantsArray[i].Name);
+            $('#plantInfo').Text(plantsArray[i].Description);
             break;
         }
     }
-    
-    alert(desc);
 });
