@@ -11,12 +11,18 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="./CSS/Basics.css">
         <script src="./Javascripts/Plants.js"></script>
+        <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
     </head>
     <body>
         <form class="container" style="border: 1px solid black; ">
         <div class="CentertheChild">
             <h3 style="margin-left: -2%;">Broderick's Compendium: Plants and Fungi Across the Realm</h3>
-            <div id="ScrollbarBox" style="float: right;"></div>
+            <div class="parent">
+                <div class="scrollbar"></div>
+                <div class="scrollable">
+                </div>
+            </div>
             <div>
                 <label>Plant Search: </label>
                 <input type="text" id="plantSearchBox" class=""><br>
