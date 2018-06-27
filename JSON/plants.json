@@ -308,7 +308,7 @@
     "Description": "Bishop's weed is a small plant with pale blue flowers, and small pale-green leaves. This herb will protect people from plague (+5 to Constitution Saves against disease). It is drunk in wine, and is effective for one week. In plague years, its price increases rapidly."
   },
   {
-    "Name": "BisonGourd",
+    "Name": "Bison-Gourd",
     "Description": "A vine that grows along the ground, the plant has irregular shaped leaves, and during warmer months the plant produces large yellow flowers shaped like trumpets. The flowers later turn into yellow and orange fruit with a slightly salty taste. The plant's seeds can also be harvested to extract the oil that works well as an insect repellant. The odor from the oil is almost imperceptible to people, but is effective at repelling bothersome insects. (-2 to Rolls to hit  for Insectoids)"
   },
   {
@@ -420,7 +420,7 @@
     "Description": "Hard wood native to extremely old-growth forests that is as durable as steel\/iron but 10% lighter, although it can't be used for chain weapons. Advantage on stealth checks in a woodlands environment while wearing bronzewood armor. Crafting of armor requires training from at least a moderate level craftsman."
   },
   {
-    "Name": "BullRush",
+    "Name": "Bull-Rush",
     "Description": "Bull-rushes are tall straight stemmed plants with many small flowers at the top of the stalk. These flowers must be ground into an ointment which is applied to a person's eyes or tongue. This herb will put someone to sleep for 3d12 hours on a successful medicine check. A roll of 1 on the check will instead put the person into a coma."
   },
   {
@@ -572,11 +572,11 @@
     "Description": "Cow parsnip has small leaves covered with tiny hairs. These hairs must be shaved from the leaves with a sharp knife and can then be made into a salve. Cow parsnip salve, when applied to the forehead of an afflicted person, will cure madness for a short period (1d4 hours). Repeated application over a two-week period may (DM's discretion) cure insanity altogether."
   },
   {
-    "Name": "CowWheat",
+    "Name": "Cow-Wheat",
     "Description": "Cow wheat is a small straight stemmed yellow-green plant. Its pale-yellow flowers produce a white powder when crushed, between two hands. If this powder is placed into food or drink it will cause a person to act as if very drunk. Each dose of this herb successfully administered will increase the level of drunkenness by one step. Drunkeness: Step 1: -1 to Intelligence until sober Step 2: -1 to Wisdom until sober Step 3: -1 to Charisma until sober Step 4: -1 to Dexterity until sober Step 5: the player now has disadvantage on all skill checks and attacks Step 6: the player now has disadvantage on all saves. Step 7: the player blacks out for 1d4 hours."
   },
   {
-    "Name": "CrabApple",
+    "Name": "Crab-Apple",
     "Description": "A small, shrub-like tree that sprouts pink flowers in spring and summer, turning to small fruits resembling dwarf apples in the late summer and early fall. The fruits of Crab Apple can be pulped and used as a poultice for minor wounds and inflammations, and the bark can be used as a numbing agent if applied with alcohol. In addition, the leaves have some anti-bacterial properties when used in solution. Aside from its common uses, Crab-Apple is one of the plants mentioned in the Nine Herbs Charm, which is supposedly capable of curing any poison or disease."
   },
   {
@@ -672,7 +672,7 @@
     "Description": "A leafy ground-cover plant that resembles simple collard greens but in shades of charcoal grey and blood red. Death's Collard can be shredded and steeped in sacramental wine and garlic. Although the combination sounds frightening in itself, and actually acts as a minor poison to the living, the resulting mixture is savory in taste with an aftertaste of copper. The resulting mixture, called Bloodwine, is particularly harmful to vampires and other undead. Such creatures have disadvantage on their saving throws to resist the poison's effects. Bloodwine can also be consumed by a living creature, and it remains in the system of that creature for up to 12 hours. Any undead that attempt to consume the creature or drink its blood is affected by the Bloodwine as if they had ingested it themselves. An undead creature subjected to this poison must succeed on a Constitution saving throw, taking 3d6 radiant damage on a failed save, or half as much damage on a successful one."
   },
   {
-    "Name": "Decorous NunCloak",
+    "Name": "Decorous Nun-Cloak",
     "Description": "A small flowering shrub found in many plains environments across the realm, the flowers sprout through Spring, Summer, and Fall months, and resemble nuns' hoods, even maintaining the black and white coloration. Some believe the shrubs were raised using magic in a conservative sect of Clerics or the ultra-religious as the flowering shrub grows up to a foot in every direction instantaneously whenever anyone within a 5' reach of the shrub curses. This feature makes it a popular houseplant of those trying to refrain from profanity, as pruning the shrub proves to be a monotonous and time-consuming task."
   },
   {
@@ -732,7 +732,7 @@
     "Description": "A stout stalk nearly bare from leaves except near the base, the plant is covered in fine red hairs that are painful to the touch, as each hair contains a minute amount of poison. The Red Wizards have managed to cultivate small amounts of the plant, but predominantly their supply is harvested from the Hill of Lost Souls. Commonly used as a tea for victims of frostbite and hypothermia. The hairs can be collected individually to ferment and increase the poison's effectiveness. Those unfortunate enough to come into contact with the poison must succeed at a Constitution saving throw, DC 13, or suffer 10 (3d6) poison damage and be poisoned for 2d6 minutes. If the target succeeds at the saving throw, they only suffer half damage."
   },
   {
-    "Name": "DragonsEye Oak",
+    "Name": "Dragons-Eye Oak",
     "Description": "Oak native to forests habituated by wood nyphms, whose acorns, when in the possession of a spellcaster, has a 10% chance of increasing the damage of evocation spells by one dice tier (d4 to d6, d6 to d8, etc.)."
   },
   {
@@ -952,7 +952,7 @@
     "Description": "A dark grey moss, dotted with small flecks of rust-brown, Flint Moss is commonly found in area of thermal activity or bright and constant sunlight. The moss requires fire to spread its seeds, and will ignite from even the smallest sparks. A 3\" cube of Flint Moss will burn for 3 to 4 hours and put off flame comparable to a normal sized camp fire. The moss growing on piles of rubble or loose rock is the most dangerous as friction from shifting stones can create enough heat or sparks to ignite patches of the moss, turning what was once a moss-covered mound of debris into a raging inferno. Application of Flintmoss to a bludgeoning weapon and lighting the weapon ablaze will add +3 fire damage to any successful attacks made with the weapon for 1d4+1 hours after application."
   },
   {
-    "Name": "Floureduluce (Blue Flag)",
+    "Name": "Floure-du-luce (Blue Flag)",
     "Description": "Floure-du-luce has broad and flat leaves shaped rather like a sword. The flowers are purplish-blue and faintly glow, and the roots, which tend to stretch themselves along the surface of the ground, are reddish brown on the outside. The root must be mashed and boiled and then left to stand for at least twenty days before drinking. The resulting tincture removes bruises and other external blemishes from a body very quickly (within 1d4 hours)."
   },
   {
@@ -1032,7 +1032,7 @@
     "Description": "Medium-sized bush with yellow-orange berries in autumn found in temperate regions. It can be made into Goblin Ink, which is waterproof."
   },
   {
-    "Name": "GoblinTrap",
+    "Name": "Goblin-Trap",
     "Description": "Often found in clusters, these plants resemble brown leathery vases sitting on the ground with ragged leaves splayed out around the base where thick roots grasp the earth. The tops are open, and if one should peer inside the glint of their golden seeds can be seen in the interior. However, these plants are traps, and many explorer has come across the remains of smaller humanoids, their hands still clutching the golden seed pods. If someone is unwise enough to stick their hand within the pod, they must make a DC 15 Dexterity save or suffer 1d4 damage from the internal spines of the plant, and are then grappled. Their leathery surface has an Armor Class of 11, and to free a trapped arm 10 points of damage must be inflicted upon the plant. Ripping the plant out of the ground requires a Strength check, DC 20, and inflicts another 1d4 damage upon the trapped victim."
   },
   {
@@ -1076,7 +1076,7 @@
     "Description": "A pale white mushroom with five knobby protrusions, the mushroom often resembles a skeletal hand reaching upward. When the mushroom grows in clusters, it appears as if numerous corpses are attempting to reach out of the soil. The fungus predominantly grows in the Underdark; however, it has also been seen in dark basements and unused root cellars. Several tales of superstition follow the fungus, many believing that if it appears in rooms below your house, someone will soon die in the residence. This may be partially due to the fact that the mushrooms release toxic spores that slowly inflict 4d8 poison damage over 2d8 days to people that sleep or live within 100 feet of this fungus for that period of time."
   },
   {
-    "Name": "GreenAir Bramble",
+    "Name": "Green-Air Bramble",
     "Description": "Fast-growing creeping vine that sprouts green berries and a small number of thorns. Can grow in most inhospitable climates and only needs to be in moist soil for 6 hours per week. Exposure to poison quickly kills the plant, causing leaves and berries to wilt and die. Carrying 3 feet's worth of vine grants +2 bonus to Constitution saves against inhaled poisons, airborne diseases and nauseating effects like stinking cloud."
   },
   {
@@ -1420,7 +1420,7 @@
     "Description": "A broad-leafed medium height tree that produces yellow flowers in early spring and long, flat seed-pods in mid to late summer. The tree has long been considered an object of worship since the linden was associated with Freya, the guardian of life and goddess of fortune, love, and fertility. Therefore, her tree was considered a tree of peace and it often formed the central meeting place of many villages and rural communities. Furthermore, legend has it that it cannot be struck by lightning since Freya is the wife of Wodan, the god of lightning and thunder."
   },
   {
-    "Name": "LinkSuriss",
+    "Name": "Link-Suriss",
     "Description": "A long grass that grows in large patches and is well-known for the beauty of its rippling waves in the wind. Chewing on Link-Surris for a few minutes removes the frightened condition from the recipient, if applicable, and grants the creature advantage on saving throws against being frightened for the next 30 minutes."
   },
   {
@@ -1832,7 +1832,7 @@
     "Description": "This dark-colored root grows on a plant distinguished by its waxy dark green leaves. When the root is boiled down, it turns into a thick, strong-smelling greyish liquid that cures congestion when boiled in water and inhaled. (Relieves stuffy nose, opens sinuses, for as long as the steam is breathed + 2d6x10 rounds. Grants resistance to diseases in the form of advantage when rolling for Constitution Saves against disease.)"
   },
   {
-    "Name": "RareBlue",
+    "Name": "Rare-Blue",
     "Description": "A rare, pale blue mushroom that grows only in westward facing cave mouths. Can be turned into an inhaled powder drug. Initial effect of +2 to Int and Cha for 1 hour, Seconary -1 penalty to Str and -2 penalty to Wis for 1d4 hours. Overdose 2d6 damage if 2 doses in 12 hours and 4d6 damage plus paralyzed for 2d4 hours if 3 or more doses in 24 hours."
   },
   {
