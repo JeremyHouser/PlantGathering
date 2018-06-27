@@ -1,85 +1,58 @@
-/*.parent{
+body
+{
+    background-image: url("parchment-texture.jpg");
+    background-repeat: no-repeat;    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.container
+{
+    background-color: white;
+}
+.plantsListParent{
     position:relative;
     overflow:hidden;
     height:200px;
-    width:220px;
-    float: right;
-    margin-right: 35%;
-    
-}
-.scrollable{
-    
-    position:absolute;
-    width: 180px;
-    height:100%;
-    border:1px solid #ccc;
-    font:16px/26px Georgia, Garamond, Serif;
-    margin-left: 5%;
-    padding-left: 15px;
-    background: #5B5B5B;
-    border-color: #333;
-    -moz-box-shadow: 0 1px 5px 1px rgba(255,255,255,0.15);
-    -webkit-box-shadow: 0 1px 5px 1px rgba(255,255,255,0.15);
-    box-shadow: 0 1px 5px 1px rgba(255,255,255,0.15);
-    border-radius: 25px;
-}
-.scrollbar{
-    cursor:pointer;
-    position:absolute;
-    overflow:auto;
-    top:0px;
-    right:0px;
-    z-index:2;
-    background:#444;
-    width:17px;
-    border-radius:8px;
-}
-*/
-.parent{
-    position:relative;
-    overflow:hidden;
-    height:200px;
-    width:280px;
+    width:320px;
     background:#ddd;
     float: right;
-    margin-right: 25%;
     font:16px/26px Georgia, Garamond, Serif;
-    margin-left: 5%;
     padding-left: 15px;
-    background: #5B5B5B;
+    background: rgb(207, 207, 207);
     border-color: #333;
     -moz-box-shadow: 0 1px 5px 1px rgba(255,255,255,0.15);
     -webkit-box-shadow: 0 1px 5px 1px rgba(255,255,255,0.15);
     box-shadow: 0 1px 5px 1px rgba(255,255,255,0.15);
     border-radius: 25px;
-  }
-  .scrollable{
+}
+.scrollable{
     overflow-y:scroll;
     position:absolute;
     padding:0 17px 0 0;
+    right: -17px;
     width: 100%;
     height:100%;
-  }
-  .scrollbar{
-    position:absolute;
-    overflow:auto;
-    top:0px;
-    right:0px;
-    z-index:2;
-    background:#444;
-    width:17px;
-    border-radius:8px;
-  }
+}
   
 #plantName
 {
     border-bottom: 2px solid black;
-    width: 70%;
+    width: 90%;
 }
 
 .CentertheChild
 {
-    margin-left: 20%;
+    margin-left: 15%;
+    width:800px;
+}
+
+#filtersBlock
+{
+    width: 400px;
+    float: left;
 }
 
 #divRarGrp
@@ -90,15 +63,17 @@
 #divLocGrp
 {
     float: right;
+    margin-left: 10%;
 }
 
 #divLocGrp1
 {
-    margin-right: 4px;
+    margin-right: 8px;
     float: left;
 }
 #divLocGrp2
 {
+    margin-left: 4px;
     margin-right: 4px;
     float: right;
 }
@@ -107,7 +82,13 @@
 {
     clear: both;
     margin-bottom: auto;
-    width: 50%;
+    width: 100%;
+    padding-top: 3px;
+}
+
+#plantInfo
+{
+    width: 90%;
 }
 
 .plantsClickable, #plantLocation, #plantRarity
