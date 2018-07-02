@@ -1,31 +1,19 @@
-
 var plantsJson, rarityJson, locationJson;
+$.getJSON("https://jeremyhouser.github.io/PlantGathering/JSON/plants.json", function(data)
+{
+    plantsJson = data;
+    populateScrollable();
+});
 
-//only works for rarityJson and locationJson
-//or at least it will, when its FINISHED
-function populateScrollable(data, text) {
-    $.each(data, function(i, field)
-    {
-        $.each(field.Plants, function(j)
-        {
-            if (field.Name == text)
-            {
-                var containsPlant = true;
-                $(".plantsClickable").each(function() {
-                    if($.contains(field.Plants[j]))
-                    {
-                        containsPlant = false;
-                    }
-                });
+$.getJSON("https://jeremyhouser.github.io/PlantGathering/JSON/rarities.json", function(data)
+{
+    rarityJson = data;
+});
 
-                if (containsPlant) 
-                {
-                    $('.scrollable').append("<li class='plantsClickable'>" + field.Plants[j] + "</li>");
-                }
-            }
-        });
-    });
-}
+$.getJSON("https://jeremyhouser.github.io/PlantGathering/JSON/locations.json", function(data)
+{
+    locationJson = data;
+});
 
 function FindPlantInRarity(plantName, jsonToSearch)
 {    
@@ -41,7 +29,6 @@ function FindPlantInRarity(plantName, jsonToSearch)
             }
         });
     });
-
     return plantRar;
 }
 
@@ -80,26 +67,155 @@ function FindPlantInLocation(plantName)
     return location;
 }
 
-$.getJSON("https://jeremyhouser.github.io/PlantGathering/JSON/plants.json", function(data)
+//only works for plantsJson
+//populates all plants into .scrollable
+function populateScrollable()
 {
-    plantsJson = data;
+    $(".plantsClickable").remove();
     $.each(plantsJson, function(i, field)
     {
         $('.scrollable').append("<li class='plantsClickable'>" + field.Name + "</li>");
     });
-});
+}
 
-$.getJSON("https://jeremyhouser.github.io/PlantGathering/JSON/rarities.json", function(data)
+function falseSubmit()
 {
-    rarityJson = data;
-});
+    return false;
+}
 
-$.getJSON("https://jeremyhouser.github.io/PlantGathering/JSON/locations.json", function(data)
+function NoResults() 
 {
-    locationJson = data;
-});
+    if(!($('.plantsClickable').is(':visible')))
+    {
+        if($('.noResults').length < 1)
+        {
+            $('.scrollable').append("<li class='noResults'>No Results!</li>");
+        }
+    }
+    else if($('.noResults').length > 0)
+    {
+        $('.noResults').each(function()
+        {
+            $('.noResults').remove();
+        });
+    }
+}
 
+//this grabs anything matching the filters selected //////////////////////////////////////////???
+function populateScrollableSelect(filterList)
+{
+    var currentlyIn = [];
+    var exclNum = 0;
+    $.each(filterList, function(i, v) 
+    {
+        if ($("input:radio:checked").val() == "include")
+        {   
+            //rarity filter
+            //list of plants matching selected rarity
+            $.each(rarityJson, function(i, field)
+            {
+                $.each(field.Plants, function(j, value)
+                {
+                    if (field.Name == v)
+                    {
+                        if ($.inArray(value, currentlyIn) == -1) {
+                            currentlyIn.push(value);            
+                        }
+                    }
+                });
+            });      
+            //location filter
+            //list of plants matching selected location
+            $.each(locationJson, function(i, field)
+            {
+                $.each(field.Plants, function(j, value)
+                {
+                    if (field.Name == v)
+                    {
+                        if ($.inArray(value, currentlyIn) == -1) {
+                            currentlyIn.push(value);            
+                        }
+                    }
+                });
+            });
+        }
+
+        //exclusive
+        else
+        {
+            if (exclNum == 0)
+            {
+                $.each(rarityJson, function(i, field)
+                {
+                    if (field.Name == v)
+                    {
+                        currentlyIn = field.Plants;
+                    }
+                });
+
+                $.each(locationJson, function(i, field)
+                {
+                    if (field.Name == v)
+                    {
+                        currentlyIn = field.Plants;
+                    }
+                });
+            }
+
+            else
+            {
+                var temp = [];
+                var crossCheck = [];
+                $.each(rarityJson, function(i, field)
+                {
+                    if (field.Name == v)
+                    {
+                        crossCheck = field.Plants;
+                    }
+                });
+
+                $.each(locationJson, function(i, field)
+                {
+                    if (field.Name == v)
+                    {
+                        crossCheck = field.Plants;
+                    }
+                });
+
+                $.each(currentlyIn, function(ind, val) {
+                    if ($.inArray(val, crossCheck) > -1) {
+                    temp.push(val);            
+                }});
+
+                currentlyIn = temp;
+            }
+
+            exclNum++;
+        }
+    });
+    
+    currentlyIn.sort();
+
+    //remove all elements for restock
+    $('.plantsClickable').remove();
+
+    if (currentlyIn.length == 0)
+    {
+        NoResults();
+    }
+    //restock fresh produce
+    $.each(currentlyIn, function(k, pV)
+    {
+        NoResults();
+        $('.scrollable').append("<li class='plantsClickable'>" + pV + "</li>");
+    });
+}   
+
+//events
 $(document).ready(function() {
+    $('#plantSearchBox').val("");
+    $('input:checkbox').prop('checked', false);
+
     $(document).on('click', '.plantsClickable', function(event)
     {
         var desc;
@@ -114,18 +230,21 @@ $(document).ready(function() {
                 break;
             }
         }
-
-        if($(this).text() == "Vortax")
+        
+        if($('#plantLocation').text() == " • ")
         {
             $('#plantLocation').text("??? • ");
         }
-    });
+    }); 
     
+    //this is the search function, it searches only the li in .scrollable, completely isolating it from any bugs that exist in the populate methods
     $('#plantSearchBox').keyup(function() {
         var g = $(this).val().toLowerCase();
+        
         if(g == ""){
             $('.plantsClickable').show();           
-        } 
+        }
+
         else
         {
             $('li.plantsClickable').each(function(){
@@ -133,54 +252,63 @@ $(document).ready(function() {
                 (text.indexOf(g) >= 0) ? $(this).show() : $(this).hide();
             });
         }
+        
+        //ensures that "No Results" only shows up once
+        NoResults();
+        
     });  
     
-    // click event that grabs name of clicked checkbox
-    // and calls populateScrollable to populate ".scrollable"
-    // with plants belonging to that rarity or environment
-    $("#divRarGrp > input:checkbox").click(function() {
-        $('.plantsClickable').remove();
+    // click event that grabs name of clicked checkbox and calls populateScrollable or populateScrollableSelect depending on if any checkbox is checked or not
+    $(document).find("input:checkbox").click(function() {
+        if ($("input:checkbox:checked").length)
+        {
+            var filterList = [];
+            //this needs refining to cross reference
+            $("input:checkbox:checked").each(function () {
+                filterList.push($(this).val());
+            });
 
-                                                                    //foreach checked checkbox, call populate, check if name of plant is already in an li, order all li alphabetically by value
-                                                                    //build here, turn into a function
-        $("input:checkbox:checked").each(function () {
-            populateScrollable(rarityJson, $(this).val());
-        });
-    });
+            populateScrollableSelect(filterList);
+        }
 
-    $("#divLocGrp1 > input:checkbox").click(function() {
-        $('.plantsClickable').remove();
-
-        $("input:checkbox:checked").each(function () {
-            populateScrollable(rarityJson, $(this).val());
-        });
-    });
-
-    $("#divLocGrp2 > input:checkbox").click(function() {
-        $('.plantsClickable').remove();
-        $("input:checkbox:checked").each(function () {
-            populateScrollable(rarityJson, $(this).val());
-        });
-    });
-
-    var $scrollable  = $(".scrollable"),
-    $scrollbar   = $(".scrollbar"),
-    height       = $scrollable.outerHeight(true),    // visible height
-    scrollHeight = $scrollable.prop("scrollHeight"), // total height
-    barHeight    = height * height / scrollHeight;   // Scrollbar height!
-
-    
-
-    // Scrollbar drag:
-    $scrollbar.height(barHeight).draggable( {
-        axis : "y",
-        containment : "parent", 
-        drag: function(e, ui) {
-            $scrollable.scrollTop( scrollHeight / height * ui.position.top  );
+        else
+        {
+            populateScrollable();
         }
     });
+
+    $("input:radio").change(function() {
+        $("input:checkbox:checked").prop('checked', false);
+        populateScrollable();
+
+    });
+
+//! everything past this point makes the roll tables work
+
+    $("#roll20").click( function() 
+    {
+        var resultd20 = getRandomInt(1, 20);
+        $("#resultd20").text(resultd20);
+    });
+
+    $("#roll100").click( function() 
+    {
+        var resultd100 = getRandomInt(1, 100);
+        $("#resultd100").text(resultd100);
+    });
+
+
+    $('.item').mousemove( function(e) {
+        $(this).children('p').show().css({'top': e.pageY + 10, 'left': e.pageX + 10});
+    });
     
-    $scrollable.on("scroll", function() {
-        $scrollbar.css({top: $scrollable.scrollTop() / height * barHeight });
+    $('.item').mouseleave( function() {
+        $(this).children('p').hide();
     });
 });
+
+var dieNum;
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}

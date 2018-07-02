@@ -1,69 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta charset="utf-8">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
 
-        <link href="https://fonts.googleapis.com/css?family=IM+Fell+English+SC" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="./CSS/Basics.css">
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+English+SC" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/Basics.css">
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="./Javascripts/Plants.js"></script>
-        <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script src="https://code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
-    </head>
-    <body>
-        <form class="container" style="border: 1px solid black; border-radius: 25px; ">
-            <div class="CentertheChild">
-                <h1 style="font-family: 'IM Fell English SC'; white-space: nowrap; margin-left: -7%">Broderick's Compendium: Plants and Fungi Across the Realm</h1>
-                <div id="filtersBlock">
-                    <label>Plant Search: </label>
-                    <input type="text" id="plantSearchBox"><br>
-                    <Label>Filters:</Label><br>
-                    <div id="divRarGrp">Rarities: <br>
-                        <input type="checkbox" id="cbVC" value="Very Common"> Very Common<br>
-                        <input type="checkbox" id="cbC" value="Common"> Common<br>
-                        <input type="checkbox" id="cbUC" value="Uncommon"> Uncommon<br>
-                        <input type="checkbox" id="cbR" value="Rare"> Rare<br>
-                        <input type="checkbox" id="cbVR" value="Very Rare"> Very Rare<br>
-                        <input type="checkbox" id="cbL" value="Legendary"> Legendary
-                    </div>
-                    <div id="divLocGrp">Locations:<br>
-                        <div id="divLocGrp1">
-                            <input type="checkbox" id="cbArc" value="Arctic"> Arctic<br>
-                            <input type="checkbox" id="cbCit" value="Cities"> Cities<br>
-                            <input type="checkbox" id="cbCoa" value="Coastal"> Coastal<br>
-                            <input type="checkbox" id="cbDes" value="Desert"> Desert<br>
-                            <input type="checkbox" id="cbFor" value="Forests"> Forests<br>
-                            <input type="checkbox" id="cbJun" value="Jungles"> Jungles<br>
-                        </div>
-                        <div id="divLocGrp2">
-                            <input type="checkbox" id="cbMou" value="Mountains"> Mountains<br>
-                            <input type="checkbox" id="cbOce" value="Oceans"> Oceans<br>
-                            <input type="checkbox" id="cbPla" value="Plains"> Plains<br>
-                            <input type="checkbox" id="cbRiv" value="Rivers"> Rivers<br>
-                            <input type="checkbox" id="cbSwa" value="Swamps"> Swamps<br>
-                            <input type="checkbox" id="cbUdC" value="Underdark/Caves"> Underdark/Caves
-                        </div>
-                    </div>
-                </div>
-                <div class="plantsListParent">
-                    <div class="scrollable"></div>
-                </div> 
-                <div id="plantData">
-                    <h1 id="plantName">Welcome to Broderick's Compendium!</h1>
-                    <span id="locRarSpan"><a id="plantLocation"></a><a id="plantRarity"></a></span>
-                    <p id="plantInfo">All credit for material used here goes to <a href="https://www.reddit.com/user/NeurotoxicNihilist">/u/NeurotoxicNihilist</a> 
-                        and all authors credited in his document, <a href="https://www.reddit.com/r/DnD/comments/83oupp/brodericks_compendium_plants_and_fungi_across_the/">here.</a> 
-                         I just turned it into something easy to use for my group and wanted to share it with you. This form is used for easy referencing, 
-                            and the form below is used for easy rolling. Enjoy!</p>
-                </div>           
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./Javascripts/Plants.js"></script>
+</head>
+<body>
+    <form class="container" onsubmit="return falseSubmit();">
+        <h1 class="title">Broderick's Compendium: Plants and Fungi Across the Realm</h1>
+        <div id="plantData">
+            <h1 id="plantName">Welcome to Broderick's Compendium!</h1>
+            <span id="locRarSpan"><a id="plantLocation"></a><a id="plantRarity"></a></span>
+            <p id="plantInfo">All credit for material used here goes to <a href="https://www.reddit.com/user/NeurotoxicNihilist">/u/NeurotoxicNihilist</a> 
+                and all authors credited in his document, <a href="https://www.reddit.com/r/DnD/comments/83oupp/brodericks_compendium_plants_and_fungi_across_the/">here.</a> 
+                I just turned it into something easy to use for my group and wanted to share it with you. This form is used for easy referencing, 
+                and the form below is used for easy rolling. Enjoy!</p>
+        </div>
+        <div id="filtersBlock">
+            <Label>Filters:</Label><br>
+            <input type="radio" value="include" name="rdoChoices" checked="checked"> Include values matching any of...<br>
+            <input type="radio" value="exclude" name="rdoChoices"> Include values matching only...<br>
+            <div id="divRarGrp"><div style="font-weight: bold;">Rarities:</div>
+                <input type="checkbox" class="rarityCB" value="Very Common"> Very Common<br>
+                <input type="checkbox" class="rarityCB" value="Common"> Common<br>
+                <input type="checkbox" class="rarityCB" value="Uncommon"> Uncommon<br>
+                <input type="checkbox" class="rarityCB" value="Rare"> Rare<br>
+                <input type="checkbox" class="rarityCB" value="Very Rare"> Very Rare<br>
+                <input type="checkbox" class="rarityCB" value="Legendary"> Legendary
             </div>
-        </form>
-        <form class="container" style="border: 1px solid black; border-radius: 25px; ">
-            Roller goes here
-        </form>
-    </body>
+
+            <div id="divLocGrp"><div style="font-weight: bold;">Locations:</div>
+                <div id="divLocGrp1">
+                    <input type="checkbox" class="locationCB" value="Arctic"> Arctic<br>
+                    <input type="checkbox" class="locationCB" value="Cities"> Cities<br>
+                    <input type="checkbox" class="locationCB" value="Coastal"> Coastal<br>
+                    <input type="checkbox" class="locationCB" value="Desert"> Desert<br>
+                    <input type="checkbox" class="locationCB" value="Forests"> Forests<br>
+                    <input type="checkbox" class="locationCB" value="Jungles"> Jungles<br>
+                </div>
+                <div id="divLocGrp2">
+                    <input type="checkbox" class="locationCB" value="Mountains"> Mountains<br>
+                    <input type="checkbox" class="locationCB" value="Oceans"> Oceans<br>
+                    <input type="checkbox" class="locationCB" value="Plains"> Plains<br>
+                    <input type="checkbox" class="locationCB" value="Rivers"> Rivers<br>
+                    <input type="checkbox" class="locationCB" value="Swamps"> Swamps<br>
+                    <input type="checkbox" class="locationCB" value="Underdark/Caves"> Underdark<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/Caves
+                </div>
+            </div>
+        </div>
+        <div id="plantsAndSearch">
+            <input type="text" name="plantSearchBox" id="plantSearchBox" class="form-control" placeholder="Search plants here...">
+            <div class="plantsListParent">
+                <div class="scrollable"></div>
+            </div> 
+        </div>
+                   
+    </form>
+    <form class="container">
+        <h1  class="title">d100 tables for scavenging plants </h1>
+        <p>Broderick's method for nature scavenging is a nature check. 10-14 is mildly
+                successful, 15-19 is successful, 20+ is very successful. This would mean that
+                for a mild success, roll on the table with disadvantage, for a success, roll on
+                the table to see what kind of plant you get, and for very successful roll with
+                advantage.</p>
+        <p>In most cases, 100 will also count as Very Rare, Legendary should only be in
+                one or two places around the world, so make sure the setting’s right to get a
+                Legendary plant.</p>
+        <div class="item" style="float: left;">
+            <p id="tooltip"> Based on the number of plants on the list. Much more lenient.</p>
+            <table class="table table-condensed table-bordered">
+                <tr>
+                    <td> 1 - 29 </td><td> Very Common </td><td> 80 - 91 </td><td> Rare </td>
+                </tr>
+                <tr>
+                    <td> 30 - 57 </td><td> Common </td><td> 92 - 99 </td><td> Very Rare </td>
+                </tr>
+                <tr>
+                    <td> 58 - 79 </td><td> Uncommon </td><td> 100 </td><td> Very Rare or Legendary </td>
+                </tr>
+            </table>
+        </div>
+        <div class="item" style="clear: left; float: left;">
+                <p id="tooltip"> More logarithmic. Slightly harder to do better on.</p>
+            <table class="table table-condensed table-bordered">
+                <tr>
+                    <td> 1 - 53 </td><td> Very Common </td>
+                    <td> 92 - 96 </td><td> Rare </td>
+                </tr>
+                <tr>
+                    <td> 54 - 79 </td><td> Common </td>
+                    <td> 97 - 99 </td><td> Very Rare </td>
+                </tr>
+                <tr>
+                    <td> 80 - 91  </td><td> Uncommon </td>
+                    <td> 100 </td><td> Very Rare or Legendary </td>
+                </tr>
+            </table>
+        </div>
+        <div class="item" style="clear: left; float: left;">
+            <p id="tooltip"> Very logarithmic. The actual result for legendary is a 0.38% success rate, so it's pretty hard to do well.</p>
+            <table class="table table-condensed table-bordered">
+                <tr>
+                    <td> 1 - 55 </td><td> Very Common </td><td> 94 - 98 </td><td> Rare </td>
+                </tr>
+                <tr>
+                    <td> 56 - 81 </td><td> Common </td><td> 99 </td><td> Very Rare </td>
+                </tr>
+                <tr>
+                    <td> 82 - 93 </td><td> Uncommon </td><td> 100 </td><td> Very Rare or Legendary </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
 </html>
