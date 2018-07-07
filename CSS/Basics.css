@@ -115,7 +115,7 @@ body
 
 .plantsClickable, #plantLocation, #plantRarity
 {
-    text-decoration: none !important;
+    text-decoration: none; !important
     color: black;
 }
 .plantsClickable:hover
