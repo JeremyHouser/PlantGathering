@@ -91,6 +91,7 @@ body
 .plantsClickable
 {
     margin-left: .25em;
+    display: block;
 }
  
 /*data half of form*/
