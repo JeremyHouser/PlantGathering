@@ -1732,6 +1732,10 @@
     "Description": "This herb keeps a person warm for one night or one day, and prevents them suffering from exposure. This can mean the difference between life and death."
   },
   {
+    "Name": "Panacea Flower",
+    "Description": "An extremely common plant in the deep swamps it is found, when consumed raw the plant is extremely foul tasting and a powerful narcotic. When processed using the essence of an ooze and boiled steadily for a length of time and then quickly cooled, the red panacea flower forms the potent and much sought after deep red healing potion. Changes in preparation and concentrations in combination with the skill of the alchemist creates the rarer health potions which have a more potent effect for healing."
+  },
+  {
     "Name": "Panaeolo",
     "Description": "Magical herb whose leaves tastes like leather and function as an ingested drug with no initial effect. Secondary effect after 1d4 hours is to increase all arcane spell save DCs by 2 for 1d4 hours and 1d8 psychic damage. A second dose within an hour of the first improves the effect to a +3 to save DCs and deals 2d8 psychic damage. Further doses only cause more and increasing psychic damage."
   },
