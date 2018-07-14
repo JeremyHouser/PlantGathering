@@ -16,53 +16,55 @@
 <body>
     <form class="container" onsubmit="return falseSubmit();">
         <h1 class="title">Broderick's Compendium: Plants and Fungi Across the Realm</h1>
-        <div id="plantData">
-            <h1 id="plantName">Welcome to Broderick's Compendium!</h1>
-            <span id="locRarSpan"><a id="plantLocation"></a><a id="plantRarity"></a></span>
-            <p id="plantInfo">All credit for material used here goes to <a href="https://www.reddit.com/user/NeurotoxicNihilist">/u/NeurotoxicNihilist</a> 
-                and all authors credited in his document, <a href="https://www.reddit.com/r/DnD/comments/83oupp/brodericks_compendium_plants_and_fungi_across_the/">here.</a> 
-                I just turned it into something easy to use for my group and wanted to share it with you. This form is used for easy referencing, 
-                and the form below is used for easy rolling. Enjoy!</p>
-        </div>
-        <div id="filtersBlock">
-            <Label>Filters:</Label><br>
-            <input type="radio" value="include" name="rdoChoices" checked="checked"> Include values matching any of...<br>
-            <input type="radio" value="exclude" name="rdoChoices"> Include values matching only...<br>
-            <div id="divRarGrp"><div style="font-weight: bold;">Rarities:</div>
-                <input type="checkbox" class="rarityCB" value="Very Common"> Very Common<br>
-                <input type="checkbox" class="rarityCB" value="Common"> Common<br>
-                <input type="checkbox" class="rarityCB" value="Uncommon"> Uncommon<br>
-                <input type="checkbox" class="rarityCB" value="Rare"> Rare<br>
-                <input type="checkbox" class="rarityCB" value="Very Rare"> Very Rare<br>
-                <input type="checkbox" class="rarityCB" value="Legendary"> Legendary
-            </div>
+	        <div class="col-lg-6">
+	            <h1 id="plantName">Welcome to Broderick's Compendium!</h1>
+	            <span id="locRarSpan"><a id="plantLocation"></a><a id="plantRarity"></a></span>
+	            <p id="plantInfo">All credit for material used here goes to <a href="https://www.reddit.com/user/NeurotoxicNihilist">/u/NeurotoxicNihilist</a> 
+	                and all authors credited in his document, <a href="https://www.reddit.com/r/DnD/comments/83oupp/brodericks_compendium_plants_and_fungi_across_the/">here.</a> 
+	                I just turned it into something easy to use for my group and wanted to share it with you. This form is used for easy referencing, 
+	                and the form below is used for easy rolling. Enjoy!</p>
+	        </div>
+	        <div class="col-lg-3" style="overflow: hidden;">
+	            <Label>Filters:</Label><br>
+	            <input type="radio" value="include" name="rdoChoices" checked="checked"> Include values matching any of...<br>
+	            <input type="radio" value="exclude" name="rdoChoices"> Include values matching only...<br>
+	            <div class="row">
+	            <div id="divRarGrp" class="col-lg-2"><div style="font-weight: bold;">Rarities:</div>
+	                <input type="checkbox" class="rarityCB" value="Very Common"> Very Common<br>
+	                <input type="checkbox" class="rarityCB" value="Common"> Common<br>
+	                <input type="checkbox" class="rarityCB" value="Uncommon"> Uncommon<br>
+	                <input type="checkbox" class="rarityCB" value="Rare"> Rare<br>
+	                <input type="checkbox" class="rarityCB" value="Very Rare"> Very Rare<br>
+	                <input type="checkbox" class="rarityCB" value="Legendary"> Legendary
+	            </div>
 
-            <div id="divLocGrp"><div style="font-weight: bold;">Locations:</div>
-                <div id="divLocGrp1">
-                    <input type="checkbox" class="locationCB" value="Arctic"> Arctic<br>
-                    <input type="checkbox" class="locationCB" value="Cities"> Cities<br>
-                    <input type="checkbox" class="locationCB" value="Coastal"> Coastal<br>
-                    <input type="checkbox" class="locationCB" value="Desert"> Desert<br>
-                    <input type="checkbox" class="locationCB" value="Forests"> Forests<br>
-                    <input type="checkbox" class="locationCB" value="Jungles"> Jungles<br>
-                </div>
-                <div id="divLocGrp2">
-                    <input type="checkbox" class="locationCB" value="Mountains"> Mountains<br>
-                    <input type="checkbox" class="locationCB" value="Oceans"> Oceans<br>
-                    <input type="checkbox" class="locationCB" value="Plains"> Plains<br>
-                    <input type="checkbox" class="locationCB" value="Rivers"> Rivers<br>
-                    <input type="checkbox" class="locationCB" value="Swamps"> Swamps<br>
-                    <input type="checkbox" class="locationCB" value="Underdark/Caves"> Underdark<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/Caves
-                </div>
-            </div>
-        </div>
-        <div id="plantsAndSearch">
-            <input type="text" name="plantSearchBox" id="plantSearchBox" class="form-control" placeholder="Search plants here...">
-            <div class="plantsListParent">
-                <div class="scrollable"></div>
-            </div> 
-        </div>
-                   
+	            <div id="divLocGrp">
+	            	<div style="font-weight: bold;">Locations:</div>
+	                <div id="divLocGrp1">
+	                    <input type="checkbox" class="locationCB" value="Arctic"> Arctic<br>
+	                    <input type="checkbox" class="locationCB" value="Cities"> Cities<br>
+	                    <input type="checkbox" class="locationCB" value="Coastal"> Coastal<br>
+	                    <input type="checkbox" class="locationCB" value="Desert"> Desert<br>
+	                    <input type="checkbox" class="locationCB" value="Forests"> Forests<br>
+	                    <input type="checkbox" class="locationCB" value="Jungles"> Jungles<br>
+	                </div>
+	                <div id="divLocGrp2">
+	                    <input type="checkbox" class="locationCB" value="Mountains"> Mountains<br>
+	                    <input type="checkbox" class="locationCB" value="Oceans"> Oceans<br>
+	                    <input type="checkbox" class="locationCB" value="Plains"> Plains<br>
+	                    <input type="checkbox" class="locationCB" value="Rivers"> Rivers<br>
+	                    <input type="checkbox" class="locationCB" value="Swamps"> Swamps<br>
+	                    <input type="checkbox" class="locationCB" value="Underdark/Caves"> Underdark<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/Caves
+	                </div>
+	            </div>
+	        	</div>
+	        </div>
+	        <div class="col-lg-3">
+	            <input type="text" name="plantSearchBox" id="plantSearchBox" class="form-control" placeholder="Search plants here...">
+	            <div class="plantsListParent">
+	                <div class="scrollable"></div>
+	            </div> 
+	        </div>
     </form>
     <form class="container">
         <h1  class="title">d100 tables for scavenging plants </h1>
