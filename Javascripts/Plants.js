@@ -206,8 +206,8 @@ function populateScrollableSelect(filterList)
     //restock fresh produce
     $.each(currentlyIn, function(k, pV)
     {
-        NoResults();
         $('.scrollable').append("<li class='plantsClickable'>" + pV + "</li>");
+        NoResults();
     });
 }   
 
