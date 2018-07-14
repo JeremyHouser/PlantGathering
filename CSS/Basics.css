@@ -16,6 +16,12 @@ body
     text-align: center;
 }
 
+li 
+{
+    display: block;
+    text-decoration: none;
+}
+
 /*modifies bootstrap class, covers top and bottom forms*/
 .container
 {
