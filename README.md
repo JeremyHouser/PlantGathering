@@ -1,8 +1,2 @@
-7/14: 
-
---Bootstrapped document
-
---reduced code bloat
-
---Plants Added: 
-    Panacea Flower
+Got rid of theme
+Implementing CSS and Javascript for next commit
