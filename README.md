@@ -1,4 +1,4 @@
-7/14
+7/14: 
 Bootstrapped document
 reduced code bloat
 
