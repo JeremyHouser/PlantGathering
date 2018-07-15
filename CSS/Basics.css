@@ -12,7 +12,6 @@ body
 {
     text-decoration: underline;
     font-family: 'IM Fell English SC'; 
-    white-space: nowrap;
     text-align: center;
 }
 
@@ -46,24 +45,24 @@ li
 
 #divRarGrp
 {
-    float: left;
-    width: 43%
+   /* float: left;
+    width: 43% */
 }
 
 #divLocGrp
 {
-    float: right;
-    width: 57%;
+    margin-left: 1.1em;
 }
 
 #divLocGrp1
 {
     float: left;
+    margin-right: 2em;
 }
 
 #divLocGrp2
 {
-    float: right;
+    float: left;
 }
 
 #plantsAndSearch
