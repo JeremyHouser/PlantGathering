@@ -1,2 +1,6 @@
-Got rid of theme
-Implementing CSS and Javascript for next commit
+7/14
+Bootstrapped document
+reduced code bloat
+
+Plants Added: 
+Panacea Flower
