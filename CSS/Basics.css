@@ -6,6 +6,7 @@ body
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    color: white;
 }
 
 .title 
@@ -20,10 +21,11 @@ li
     text-decoration: none;
 }
 
+
 /*modifies bootstrap class, covers top and bottom forms*/
 .container
 {
-    background-color: white;
+    background-color: #3e4959;
     padding-bottom: 1%;
     border: 1px solid black; 
     border-radius: 6px;
@@ -42,10 +44,11 @@ li
     float: left;
 }
 
+
 #divRarGrp
 {
-   /* float: left;
-    width: 43% */
+    white-space: nowrap;
+    margin-right: .25em;
 }
 
 #divLocGrp
@@ -55,13 +58,13 @@ li
 
 #divLocGrp1
 {
+    margin-right: .5em;
     float: left;
-    margin-right: 2em;
 }
 
 #divLocGrp2
 {
-    float: left;
+
 }
 
 #plantsAndSearch
@@ -80,7 +83,7 @@ li
     overflow:hidden;
     height:200px;
     font:16px/26px Georgia, Garamond, Serif;
-    background: rgb(230, 230, 230);
+    background: #222c3a;
     border: 1px solid black;
     border-radius: 6px;
 }
