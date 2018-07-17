@@ -8,11 +8,21 @@ $.getJSON("https://jeremyhouser.github.io/PlantGathering/JSON/plants.json", func
 $.getJSON("https://jeremyhouser.github.io/PlantGathering/JSON/rarities.json", function(data)
 {
     rarityJson = data;
+
+    $.each(rarityJson, function(i, field)
+    {
+        $('#raritySelect').append("<option class='rarityOption'>" + field.Name + "</option>");
+    });
 });
 
 $.getJSON("https://jeremyhouser.github.io/PlantGathering/JSON/locations.json", function(data)
 {
     locationJson = data;
+
+    $.each(locationJson, function(i, field)
+    {
+        $('#environmentSelect').append("<option class='environmentOption'>" + field.Name + "</option>");
+    });
 });
 
 function FindPlantInRarity(plantName, jsonToSearch)

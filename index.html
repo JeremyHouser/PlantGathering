@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta charset="utf-8">
 
     <link href="https://fonts.googleapis.com/css?family=IM+Fell+English+SC" rel="stylesheet">
@@ -24,7 +24,7 @@
 	                I just turned it into something easy to use for my group and wanted to share it with you. This form is used for easy referencing, 
 	                and the form below is used for easy rolling. Enjoy!</p>
 	        </div>
-	        <div class="col-lg-3" style="overflow: hidden;">
+	        <div class="col-lg-3">
 	            <Label>Filters:</Label><br>
 	            <input type="radio" value="include" name="rdoChoices" checked="checked"> Include values matching any of...<br>
 	            <input type="radio" value="exclude" name="rdoChoices"> Include values matching only...<br>
@@ -73,60 +73,94 @@
 	        </div>
     </form>
     <form class="container">
-        <h1  class="title">d100 tables for scavenging plants </h1>
+    	<h1  class="title">d100 tables for scavenging plants </h1>
         <p>Broderick's method for nature scavenging is a nature check. 10-14 is mildly
                 successful, 15-19 is successful, 20+ is very successful. This would mean that
                 for a mild success, roll on the table with disadvantage, for a success, roll on
                 the table to see what kind of plant you get, and for very successful roll with
-                advantage.</p>
-        <p>In most cases, 100 will also count as Very Rare, Legendary should only be in
+                advantage. </p>
+        <p style="font-weight: bold;">In most cases, 100 will also count as Very Rare, Legendary should only be in
                 one or two places around the world, so make sure the setting’s right to get a
                 Legendary plant.</p>
-        <div class="item" style="float: left;">
-            <p id="tooltip"> Based on the number of plants on the list. Much more lenient.</p>
-            <table class="table table-condensed table-bordered">
-                <tr>
-                    <td> 1 - 29 </td><td> Very Common </td><td> 80 - 91 </td><td> Rare </td>
-                </tr>
-                <tr>
-                    <td> 30 - 57 </td><td> Common </td><td> 92 - 99 </td><td> Very Rare </td>
-                </tr>
-                <tr>
-                    <td> 58 - 79 </td><td> Uncommon </td><td> 100 </td><td> Very Rare or Legendary </td>
-                </tr>
-            </table>
-        </div>
-        <div class="item" style="clear: left; float: left;">
-                <p id="tooltip"> More logarithmic. Slightly harder to do better on.</p>
-            <table class="table table-condensed table-bordered">
-                <tr>
-                    <td> 1 - 53 </td><td> Very Common </td>
-                    <td> 92 - 96 </td><td> Rare </td>
-                </tr>
-                <tr>
-                    <td> 54 - 79 </td><td> Common </td>
-                    <td> 97 - 99 </td><td> Very Rare </td>
-                </tr>
-                <tr>
-                    <td> 80 - 91  </td><td> Uncommon </td>
-                    <td> 100 </td><td> Very Rare or Legendary </td>
-                </tr>
-            </table>
-        </div>
-        <div class="item" style="clear: left; float: left;">
-            <p id="tooltip"> Very logarithmic. The actual result for legendary is a 0.38% success rate, so it's pretty hard to do well.</p>
-            <table class="table table-condensed table-bordered">
-                <tr>
-                    <td> 1 - 55 </td><td> Very Common </td><td> 94 - 98 </td><td> Rare </td>
-                </tr>
-                <tr>
-                    <td> 56 - 81 </td><td> Common </td><td> 99 </td><td> Very Rare </td>
-                </tr>
-                <tr>
-                    <td> 82 - 93 </td><td> Uncommon </td><td> 100 </td><td> Very Rare or Legendary </td>
-                </tr>
-            </table>
-        </div>
+        <p>The baseline recommendation according to the Dungeon Master's Guide 
+            	is that the character discovers 1d6 + Wisdom Modifier pounds of food. I prefer
+            	to use the generic term "units" as recovering 11 pounds of Vortex doesn't work. 
+            	I then reduce the amount found by a compounding 10% for each level of rarity 
+            	above common. As always, you're free to use this however you wish, you don't 
+            	even need to use the below tool, this is just how I do it.</p>    	
+        
+		<div class="row">
+
+            	<div style="float: left;">
+	        		<div class="item">
+		            	<p id="tooltip"> Based on the number of plants on the list. Much more lenient.</p>
+			            <div class="table table-condensed table-bordered">
+			                <div>
+			                    <div class="perTable"> 01 - 29 </div><div class="rarTable"> Very Common </div>
+			                    <div class="perTable"> 30 - 57 </div><div class="rarTable"> Common </div>
+			                </div>
+			                <div>
+			                    <div class="perTable"> 58 - 79 </div><div class="rarTable"> Uncommon </div>
+			                    <div class="perTable"> 80 - 91 </div><div class="rarTable"> Rare </div>
+			                </div>
+			                <div>
+			                    <div class="perTable"> 92 - 99 </div><div class="rarTable"> Very Rare </div>
+			                    <div class="perTable">&nbsp;&nbsp;&nbsp;100 </div><div class="rarTable">Legendary</div>
+			                </div>
+			            </div>
+		        	</div>
+
+		        	<div class="item">
+		                <p id="tooltip"> More logarithmic. Slightly harder to do better on.</p>
+			            <div class="table table-condensed table-bordered">
+			                <div>
+			                    <div class="perTable"> 01 - 53 </div><div class="rarTable"> Very Common </div>
+			                    <div class="perTable"> 54 - 79 </div><div class="rarTable"> Common </div>
+			                </div>
+			                <div>
+			                    <div class="perTable"> 80 - 91 </div><div class="rarTable"> Uncommon </div>
+			                    <div class="perTable"> 92 - 96 </div><div class="rarTable"> Rare </div>
+			                </div>
+			                <div>
+			                    <div class="perTable"> 97 - 99 </div><div class="rarTable"> Very Rare </div>
+			                    <div class="perTable">&nbsp;&nbsp;&nbsp;100 </div><div class="rarTable">Legendary</div>
+			                </div>
+			            </div>
+		        	</div>
+
+
+			        <div class="item">
+			            <p id="tooltip"> Very logarithmic. The actual result for legendary is a 0.38% success rate, so it's pretty hard to do well.</p>
+			            <div class="table table-condensed table-bordered">
+			                <div>
+			                    <div class="perTable"> 01 - 55 </div><div class="rarTable"> Very Common </div>
+			                    <div class="perTable"> 56 - 81 </div><div class="rarTable"> Common </div>
+			                </div>
+			                <div>
+			                    <div class="perTable"> 82 - 93 </div><div class="rarTable"> Uncommon </div>	                    
+			                	<div class="perTable"> 94 - 98 </div><div class="rarTable"> Rare </div>
+			                </div>
+			                <div>
+			                    <div class="perTable">&nbsp;&nbsp;&nbsp;&nbsp;99 </div><div class="rarTable"> Very Rare </div>
+			                    <div class="perTable">&nbsp;&nbsp;&nbsp;100 </div><div class="rarTable">Legendary</div>
+			                </div>
+			            </div>
+		        	</div>
+            	</div>	
+
+        	
+	    	<div class="col-lg-4">
+	    		<select id="raritySelect" class="form-control" style="float: left; margin-right: 1em"></select>
+	    		<select id="environmentSelect" class="form-control"></select>
+	    		<input type="button" value="Choose Plant" class="btn btn-default">
+		    
+			    <h3 id="rolledPlantName">Your result will populate here</h3>
+	            <span id="locRarSpan"><a id="rolledPlantLocation">Location</a> • <a id="rolledPlantRarity">Rarity</a></span>
+	            <p id="rolledPlantInfo">Select the rarity based upon the result of your d100 and 
+	            		the environment that you are in, then click the button to choose a random 
+	            		plant and populate it's info here.</p>     	
+		    </div>
+		</div>
     </form>
 </body>
 </html>

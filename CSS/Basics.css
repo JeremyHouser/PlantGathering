@@ -1,14 +1,48 @@
 body
 {
-    background-image: url("parchment-texture.jpg");
-    background-repeat: no-repeat;    
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
     color: white;
+    background-color: #3e4959;
 }
 
+@media (min-width: 750px) 
+{
+    body 
+    {
+        background-image: url("parchment-texture.jpg");
+        background-repeat: no-repeat;    
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 750px)
+{
+    .container 
+    {
+        border: none !important;
+    }
+}
+
+@media screen and (min-width: 295px) and (max-width: 465px)
+{
+    .perTable
+    {
+        clear: left;
+    }
+    .rarTable
+    {
+        width: 8em !important;
+    }
+}
+
+/*
+@media (min-width: 617) and (max-width: 977)
+{
+
+}
+*/
 .title 
 {
     font-family: 'IM Fell English SC'; 
@@ -29,6 +63,11 @@ li
     padding-bottom: 1%;
     border: 1px solid black; 
     border-radius: 6px;
+}
+
+.col-lg-4
+{
+    float: left;
 }
 
 /*rules for objects in top form*/
@@ -102,33 +141,27 @@ li
 }
  
 /*data half of form*/
-#plantData
-{
-    float: left;
-    margin-bottom: auto;
-    width: 50%;
-    padding-top: 3px;
-}
 
-#plantName
+
+#plantName, #rolledPlantName
 {
     border-bottom: 2px solid black;
     width: 98%;
 }
 
-#plantInfo
+#plantInfo, #rolledPlantInfo
 {
     width: 98%;
 }
 
-.plantsClickable, #plantLocation, #plantRarity
+.plantsClickable, #plantLocation, #plantRarity, #rolledPlantLocation, #rolledPlantRarity
 {
-    text-decoration: none; !important
-    color: black;
+    text-decoration: none !important;
+    color: white;
 }
 .plantsClickable:hover
 {
-    color: black;
+    color: grey;
     cursor: pointer;
 }
 
@@ -149,4 +182,66 @@ li
 #resultd100, #resultd20
 {
     width: 2em;
+}
+
+#raritySelect, #environmentSelect
+{
+    width: 6em;
+}
+
+select 
+{
+    width: 10em !important;
+    margin-bottom: 1em;
+}
+
+.item
+{
+    float: left;
+    clear: left;
+    margin-left: 1em;
+}
+
+/*table*/
+.table
+{
+
+}
+
+/*row*/
+.table > div
+{
+
+}
+
+/*column*/
+.table > div > div 
+{
+    float: left;
+}
+
+/*currently not in use*/
+.table > div > div > div
+{
+
+}
+
+.perTable
+{
+    width: 4em;
+}
+
+.rarTable
+{
+    width: 12em;
+}
+
+.item
+{
+    border-bottom: 2px solid white;
+}
+
+.item:nth-of-type(3)
+{
+    margin-bottom: .5em;
 }
